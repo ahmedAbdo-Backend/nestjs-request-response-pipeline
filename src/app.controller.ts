@@ -20,6 +20,7 @@ export class AppController {
   @Post()
   examplePost(@Body(new FreezePipe()) body: any) {
     body.test = 32;
+    return body
   }
 
   @Get('error')

@@ -7,6 +7,8 @@ export class FreezePipe implements PipeTransform {
   transform(value: any) {
     this.logger.debug('FreezePipe running...');
     Object.freeze(value);
+    value.pipe ="dbah"
+
     return value;
   }
 }
